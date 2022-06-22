@@ -87,3 +87,9 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.RIMIKHANSECRET }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+
+
+      # delete-artifact
+      - uses: geekyeggo/delete-artifact@v1
+        with:
+          name: .net-app
